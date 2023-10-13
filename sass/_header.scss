@@ -1,0 +1,37 @@
+header {
+    text-align: left;
+    padding: 20px 0;
+    margin-left: 40px; /* Equal margin on both sides of the header */
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between; /* Space between h1 and ul */
+    align-items: center; /* Vertically align the items */
+    
+    span {
+        font-weight: 300;
+    }
+    
+    ul {
+        list-style: none;
+        display: flex;
+        
+        li {
+            margin-right: 20px;
+            color: black; /* Set the list item text color to black */
+            
+            a {
+                font-family: 'Averta Demo', sans-serif;
+                text-decoration: none;
+                color: black;
+                
+                &:hover {
+                    color: blue; /* Change color on hover */
+                }
+            }
+        }
+    }
+    
+    h1 {
+        font-family: 'Proxima Nova', sans-serif;
+    }
+}
