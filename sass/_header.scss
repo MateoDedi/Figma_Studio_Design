@@ -1,11 +1,11 @@
 header {
     text-align: left;
     padding: 20px 0;
-    margin-left: 40px; /* Equal margin on both sides of the header */
+    margin-left: 40px;
     margin-right: 40px;
     display: flex;
-    justify-content: space-between; /* Space between h1 and ul */
-    align-items: center; /* Vertically align the items */
+    justify-content: space-between; 
+    align-items: center; 
     
     span {
         font-weight: 300;
@@ -17,15 +17,32 @@ header {
         
         li {
             margin-right: 20px;
-            color: black; /* Set the list item text color to black */
+            color: black;
             
             a {
                 font-family: 'Averta Demo', sans-serif;
                 text-decoration: none;
                 color: black;
+                transition: border-bottom 0.3s ease-in-out; // Add the transition here
+                position: relative;
                 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px; /* Adjust the underline height as needed */
+                    background: rgb(26, 114, 245);
+                    transition: width 0.3s ease-in-out;
+                }
+
                 &:hover {
-                    color: blue; /* Change color on hover */
+                    color: rgb(26, 114, 245);
+                }
+
+                &:hover::before {
+                    width: 100%; /* Expand the underline to 100% width on hover */
                 }
             }
         }
