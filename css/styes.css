@@ -134,7 +134,7 @@ header h1 {
 .section1 .section1-left p {
   color: #565656;
   font-family: "Averta Demo", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -183,11 +183,21 @@ header h1 {
   margin: 10% auto;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 10px 0 #0f0f0f;
   cursor: default;
   position: relative;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.section1 .section1-left .modal .overlay {
+.section1 .section1-left .modal .close {
+  float: right;
+  cursor: pointer;
+}
+.section1 .section1-left .modal p {
+  margin: 1.5rem;
+}
+.section1 .section1-left .overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -195,12 +205,70 @@ header h1 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  /* Place overlay below modal */
+  z-index: 2;
 }
-.section1 .section1-left .modal .close {
-  float: right;
+.section1 .section1-left body.modal-open {
+  overflow: hidden;
+}
+.section1 .section1-left label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.section1 .section1-left form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section1 .section1-left form .name,
+.section1 .section1-left form .company,
+.section1 .section1-left form .email {
+  margin-bottom: 15px;
+  font-family: "Averta Demo", sans-serif;
+}
+.section1 .section1-left form input[type=text],
+.section1 .section1-left form input[type=email] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.section1 .section1-left form p {
+  font-size: 12px;
+}
+.section1 .section1-left form .msg {
+  display: none;
+}
+.section1 .section1-left form .error {
+  color: red;
+}
+.section1 .section1-left form .success {
+  color: green;
+}
+.section1 .section1-left form #submit[type=submit] {
+  background-color: #2639ED;
+  color: #FFF;
+  font-family: "Averta Demo", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  padding: 15px 40px;
+  border-radius: 40px;
   cursor: pointer;
+  display: block;
+  margin: 5vh auto;
+  margin-top: 5vh;
+}
+.section1 .section1-left form #submit[type=submit]:hover {
+  background-color: #152081;
+  transition: background-color 0.3s ease;
 }
 .section1 .section1-right {
   width: 50vw;
