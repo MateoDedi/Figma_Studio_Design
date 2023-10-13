@@ -1,8 +1,10 @@
 header {
     text-align: left;
     padding: 20px 0;
+    margin-top: 5vh;
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +39,7 @@ header {
             margin: 3px 0;
             transition: transform 0.3s ease-in-out;
         }
-        // TRANSFORMATION NOT WORKING AAAAAAAAAAAA
+        
         &.active {
             z-index: 11;
             .bar:first-child {
@@ -49,7 +51,7 @@ header {
             }
 
             .bar:last-child {
-                transform: rotate(-45deg) translate(7px, -7px);
+                transform: rotate(-45deg) translate(8px, -8px);
             }
         }
     }

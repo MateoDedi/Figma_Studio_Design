@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+
     <header>
         <h1>A+ <span>Studio</span></h1>
         <div class="menu-container">
@@ -27,22 +29,62 @@
             </ul>
         </div>
     </header>
+
+
     <main class="container">
         <section class="section1">
             <div class="section1-left">
                 <h1 class="company-name"> A Digital Product Agency</h1>
-                <p>Leading digital agency with solid design and development expertise. We build readymade websites,
-                    mobile applications, and elaborate online business services.</p>
+                <p>Leading digital agency with solid design and development
+                    <br>expertise. We build readymade websites,
+                    mobile applications,
+                    <br> and elaborate online business services.
+                </p>
+                <div>
+                    <div class="btn">
+                        <button id="openModal">Contact Now</button>
+                    </div>
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <div class="modal" id="modal">
+                    <div class="close" id="closeModal">x</div>
+                    <form method="get">
+                        <div class="name">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Please enter your name">
+                            <br>
+                            <p class="msg"></p>
+                        </div>
+                        <div class="company">
+                            <label for="company">Company:</label>
+                            <input type="text" id="company" placeholder="Please specify your company">
+                            <br>
+                            <p class="msg"></p>
+                        </div>
+                        <div class="email">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" placeholder="Please enter your email">
+                            <br>
+                            <p class="msg"></p>
+                        </div>
+                        <input type="submit" value="submit" id="submit">
+                    </form>
+                </div>
             </div>
             <div class="section1-right">
-
+                <img src="Images/heroImage.png" alt="hero">
             </div>
         </section>
     </main>
+
+
     <footer class="container">
 
     </footer>
-    <script src="script.js"></script>
+
+
+    <script src="/JS/menu_script.js"></script>
+    <script src="/JS/modal_script.js"></script>
 </body>
 
 </html>
