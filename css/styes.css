@@ -15,8 +15,8 @@
 header {
   text-align: left;
   padding: 20px 0;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,9 +24,62 @@ header {
 header span {
   font-weight: 300;
 }
+header .menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+header .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  border: none;
+  position: relative;
+  right: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 11;
+}
+header .hamburger-menu .bar {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+header .hamburger-menu.active {
+  z-index: 11;
+}
+header .hamburger-menu.active .bar:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+header .hamburger-menu.active .bar:nth-child(2) {
+  transform: scaleX(0);
+}
+header .hamburger-menu.active .bar:last-child {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+header .menu-container .menu-list {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
+  width: 40vw;
+}
+header .menu-container .menu-list li {
+  margin-bottom: 10px;
+}
 header ul {
   list-style: none;
-  display: flex;
+  display: none;
 }
 header ul li {
   margin-right: 20px;
@@ -45,7 +98,7 @@ header ul li a::before {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Adjust the underline height as needed */
+  height: 2px;
   background: rgb(26, 114, 245);
   transition: width 0.3s ease-in-out;
 }
@@ -53,7 +106,7 @@ header ul li a:hover {
   color: rgb(26, 114, 245);
 }
 header ul li a:hover::before {
-  width: 100%; /* Expand the underline to 100% width on hover */
+  width: 100%;
 }
 header h1 {
   font-family: "Proxima Nova", sans-serif;

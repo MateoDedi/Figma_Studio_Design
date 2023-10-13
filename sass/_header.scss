@@ -1,38 +1,101 @@
 header {
     text-align: left;
     padding: 20px 0;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    
+    justify-content: space-between;
+    align-items: center;
+
     span {
         font-weight: 300;
     }
-    
+
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+        background: none;
+        border: none;
+        position: relative;
+        right: 20px;
+        transition: transform 0.3s ease-in-out;
+        z-index: 11;
+
+        .bar {
+            width: 30px;
+            height: 3px;
+            background: black;
+            margin: 3px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+        // TRANSFORMATION NOT WORKING AAAAAAAAAAAA
+        &.active {
+            z-index: 11;
+            .bar:first-child {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .bar:nth-child(2) {
+                transform: scaleX(0);
+            }
+
+            .bar:last-child {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+    }
+
+    .menu-container .menu-list {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        transition: right 0.3s ease-in-out;
+        z-index: 10;
+        width: 40vw;
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+    }
+
     ul {
         list-style: none;
-        display: flex;
-        
+        display: none;
+
         li {
             margin-right: 20px;
             color: black;
-            
+
             a {
                 font-family: 'Averta Demo', sans-serif;
                 text-decoration: none;
                 color: black;
-                transition: border-bottom 0.3s ease-in-out; // Add the transition here
+                transition: border-bottom 0.3s ease-in-out;
                 position: relative;
-                
+
                 &::before {
                     content: "";
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     width: 0;
-                    height: 2px; /* Adjust the underline height as needed */
+                    height: 2px;
                     background: rgb(26, 114, 245);
                     transition: width 0.3s ease-in-out;
                 }
@@ -42,12 +105,12 @@ header {
                 }
 
                 &:hover::before {
-                    width: 100%; /* Expand the underline to 100% width on hover */
+                    width: 100%;
                 }
             }
         }
     }
-    
+
     h1 {
         font-family: 'Proxima Nova', sans-serif;
     }
