@@ -277,6 +277,39 @@ header h1 {
 .section1 .section1-right img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  font-family: "Averta Demo", sans-serif;
+}
+.section2 .clients h2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.section2 .clients p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #757575;
+  margin-top: 3vh;
+}
+.section2 .swiper {
+  height: 50px;
+  width: 100%;
+}
+.section2 .swiper .google {
+  content: url();
 }
 
 .container {
