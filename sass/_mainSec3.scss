@@ -1,0 +1,146 @@
+.business {
+    display: grid;
+    grid-template-columns: minmax(5vw, 1fr) repeat(12, minmax(11px, 100px)) minmax(5vw, 1fr);
+    align-items: center;
+    margin-bottom: 146px;
+  
+    .title {
+      position: relative;
+      grid-column: 2/-2;
+      grid-row: 1;
+      z-index: 10;
+  
+      &::before {
+        content: url("Rectangle 25.svg");
+        position: absolute;
+        z-index: -5;
+        top: -60px;
+        left: -39px;
+      }
+  
+      &::after {
+        content: url("DotE7.svg");
+        position: absolute;
+        z-index: -5;
+        top: 284px;
+        left: 4px;
+      }
+  
+      p::after {
+        content: url("DotE7.svg");
+        position: absolute;
+        z-index: -5;
+        top: 284px;
+        left: 213px;
+      }
+  
+      @media (min-width: 1440px) {
+        grid-column: 2/6;
+      }
+    }
+  
+    .card-container {
+      grid-column: 2/-2;
+      grid-row: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+  
+      @media (min-width: 768px) {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 1fr 50px 1fr 50px;
+      }
+  
+      @media (min-width: 1440px) {
+        grid-column: 7/-2;
+        grid-row: 1;
+      }
+  
+      .card {
+        width: 308px;
+        height: 379px;
+        background-color: #FFF;
+        border-radius: 40px;
+        border: 1px solid #F2F2F2;
+        box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        text-align: center;
+  
+        .icon {
+          width: 121px;
+          height: 121px;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          &.bleu {
+            background-color: #F1F7FF;
+          }
+  
+          &.orange {
+            background-color: #FFF7E3;
+          }
+  
+          &.rose {
+            background-color: #FFF2F8;
+          }
+  
+          &.green {
+            background-color: #DEFFEE;
+          }
+        }
+  
+        &.card1 {
+          grid-row: 2/4;
+          grid-column: 1;
+        }
+  
+        &.card2 {
+          grid-row: 1/3;
+          grid-column: 2;
+        }
+  
+        &.card3 {
+          grid-row: 4/6;
+          grid-column: 1;
+        }
+  
+        &.card4 {
+          grid-row: 3/5;
+          grid-column: 2;
+        }
+      }
+    }
+  
+    .rectangle {
+      position: relative;
+      background-color: #F4F9FF;
+      border-top-left-radius: 150px;
+      height: 619px;
+      grid-column: 2/-2;
+      grid-row: 2/3;
+  
+      &::before {
+        position: absolute;
+        content: url("Ellipse 87.svg");
+        bottom: -72px;
+        right: 143px;
+        z-index: -50;
+      }
+  
+      @media (min-width: 1440px) {
+        grid-column: 5/15;
+        grid-row: 1;
+      }
+    }
+  }
