@@ -34,9 +34,37 @@
         width: 100%;
 
         .google {
-            content: url();
+            content: url(/Images/Google\ Logo.svg);
         }
 
-      }
+        .airbnb {
+            content: url(/Images/Airbnb\ Logo.svg);
+        }
+
+        .ubereats {
+            content: url(/Images/Uber\ Eats\ Logo.svg);
+        }
+
+        .amazon {
+            content: url(/Images/Amazon\ Logo.svg);
+        }
+
+        .starbucks {
+            content: url(/Images/starbucks-coffee.svg);
+        }
+
+        .pizza-hut {
+            content: url(/Images/pizza-hut.svg);
+        }
+
+        .adidas {
+            content: url(/Images/adidas-9.svg);
+        }
+
+        .spotify {
+            content: url(/Images/spotify-1.svg);
+        }
+
+    }
 
 }

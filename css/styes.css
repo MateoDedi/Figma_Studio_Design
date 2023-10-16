@@ -309,7 +309,28 @@ header h1 {
   width: 100%;
 }
 .section2 .swiper .google {
-  content: url();
+  content: url(/Images/Google\ Logo.svg);
+}
+.section2 .swiper .airbnb {
+  content: url(/Images/Airbnb\ Logo.svg);
+}
+.section2 .swiper .ubereats {
+  content: url(/Images/Uber\ Eats\ Logo.svg);
+}
+.section2 .swiper .amazon {
+  content: url(/Images/Amazon\ Logo.svg);
+}
+.section2 .swiper .starbucks {
+  content: url(/Images/starbucks-coffee.svg);
+}
+.section2 .swiper .pizza-hut {
+  content: url(/Images/pizza-hut.svg);
+}
+.section2 .swiper .adidas {
+  content: url(/Images/adidas-9.svg);
+}
+.section2 .swiper .spotify {
+  content: url(/Images/spotify-1.svg);
 }
 
 .container {
